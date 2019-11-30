@@ -1,3 +1,5 @@
+sayHi()
+
 class Car {
     constructor(doors, engine, color) {
         this.doors = doors
@@ -14,6 +16,10 @@ const honda = new Car(4, 'v4', 'grey')
 
 console.log(honda)
 console.log(honda.carStats())
+
+function sayHi() {
+    console.log("hello")
+}
 
 // Funtions
 // ARE hoisted 
