@@ -1,11 +1,28 @@
 // this code will run fine as the function is hoisted
 sayHi();
 
+let mixin = {
+    madeIn() {
+        console.log("This is logged")
+    }
+}
+
+let carMixin = {
+    __proto__: mixin,
+
+    madeIn() {
+        super.madeIn()
+    }
+}
+
 class Car {
     constructor(doors, engine, color) {
         this.doors = doors;
         this.engine = engine;
         this.color = color;
+
+        //assign mixin
+        Object.assign[this, carMixin()]
     }
 
     carStats() {
